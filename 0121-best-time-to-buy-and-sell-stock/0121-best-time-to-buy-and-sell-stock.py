@@ -11,6 +11,6 @@ class Solution(object):
             else:
                 if prices[r]-prices[l] > max:
                     max = prices[r]-prices[l]
-                r +=1
+                r = r + 1
         return max
             
