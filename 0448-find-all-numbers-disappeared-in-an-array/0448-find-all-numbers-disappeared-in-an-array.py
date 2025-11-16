@@ -4,13 +4,17 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        nums.sort()
-        nums_set = set(nums)
-        output = []
+        hash_table = {}
+        out = []
+
+        for num in nums:
+            hash_table[num] = 1
+
         for i in range(1,len(nums)+1):
-            if i not in nums_set:
-                output.append(i)
-        return output
+            if i not in hash_table:
+                out.append(i)
+        return out
+        
 
 
 
